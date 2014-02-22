@@ -6,6 +6,7 @@ public class MiClase {
 
 		this.wrapper1 = new Integer(2);
 	}
+
 	public MiClase(int atributo1, boolean atributoBooleano, Integer wrapper1) {
 
 		this.atributo1 = atributo1;
@@ -47,5 +48,16 @@ public class MiClase {
 		System.out.println(miClase.getAtributo1());
 		System.out.println(miClase.atributoBooleano);
 		System.out.println(miClase.getWrapper1());
+		
+		OtraClase otra = new OtraClase();
+		System.out.println(otra.getAtributo1());
+		System.out.println(otra.atributoBooleano);
+		otra.atributoBooleano = true;
+		System.out.println(otra.atributoBooleano);
+		
 	}
+}
+
+class OtraClase extends MiClase {
+
 }
