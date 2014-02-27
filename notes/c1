@@ -1,0 +1,33 @@
+Tipo de variable			Wrapper
+
+boolean					Boolean
+byte					Byte
+short					Short
+int						Integer
+long					Long
+float					Float
+double					Double
+char					Character
+
+Niveles de acceso	Dentro de la clase		En Subclases del mismo paquete		Subclases de otro paquete		Cualquiera
+
+private					x
+protected				x						x
+default					x						x									x
+public					x						x									x								x
+
+void funcion(parametro) {
+
+}
+
+tipo_de_dato function (parametros) {
+return algo;
+}
+
+void funcion() {
+}
+
+tipo_de_dato function () {
+return algo;
+}
+

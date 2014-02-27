@@ -54,10 +54,31 @@ public class MiClase {
 		System.out.println(otra.atributoBooleano);
 		otra.atributoBooleano = true;
 		System.out.println(otra.atributoBooleano);
-		
+		otra.imprimirArreglo();
 	}
 }
 
 class OtraClase extends MiClase {
 
+	int[] arreglo, arreglo2, matriz[];
+	
+	public OtraClase() {
+		arreglo = new int[5];
+		arreglo[0] = 0;
+		arreglo[1] = 1;
+		arreglo[2] = 2;
+		arreglo[3] = 3;
+		arreglo[4] = 4;
+	}
+
+	public void imprimirArreglo() {
+
+		int size = arreglo.length;
+		for(int i = 0; i < size; i++) {
+			System.out.println(arreglo[i]);
+		}
+		for (int valor : arreglo) {
+			System.out.println(valor);
+		}
+	}
 }
