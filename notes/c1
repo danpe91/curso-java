@@ -1,33 +1,42 @@
-Tipo de variable			Wrapper
 
-boolean					Boolean
-byte					Byte
-short					Short
-int						Integer
-long					Long
-float					Float
-double					Double
-char					Character
 
-Niveles de acceso	Dentro de la clase		En Subclases del mismo paquete		Subclases de otro paquete		Cualquiera
+--------------------------------------------------
+ |	Tipo de variable		|		Wrapper		|
+ |							|					|
+ |	boolean					|		Boolean		|
+ |	byte					|		Byte		|
+ |	short					|		Short		|
+ |	int						|		Integer		|
+ |	long					|		Long		|
+ |	float					|		Float		|
+ |	double					|		Double		|
+ |	char					|		Character	|
+--------------------------------------------------
 
-private					x
-protected				x						x
-default					x						x									x
-public					x						x									x								x
+--------------------------------------------------------------------------------------------------------------------------------------
+ |	Niveles de acceso	|	Dentro de la clase	|	En Subclases del mismo paquete	|	Subclases de otro paquete	|	Cualquiera	|
+ |						|						|									|								|				|
+ |		private			|			x			|									|								|				|
+ |		protected		|			x			|				x					|								|				|
+ |		default			|			x			|				x					|				x				|				|
+ |		public			|			x			|				x					|				x				|		x		|
+--------------------------------------------------------------------------------------------------------------------------------------
 
-void funcion(parametro) {
+1)
+	void funcion(parametro) {
+	}
 
-}
+2)
+	tipo_de_dato function (parametros) {
+		return algo;
+	}
 
-tipo_de_dato function (parametros) {
-return algo;
-}
+3)
+	void funcion() {
+	}
 
-void funcion() {
-}
-
-tipo_de_dato function () {
-return algo;
-}
+4)	
+	tipo_de_dato function () {
+		return algo;
+	}
 
