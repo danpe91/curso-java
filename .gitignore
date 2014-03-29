@@ -1,2 +1,13 @@
 *.class
 
+**/nbproject/private/**
+**/build/**
+**/nbbuild/**
+**/dist/**
+**/nbdist/**
+**/nbactions.xml
+**/nb-configuration.xml
+
+/codes/GraphicClase6/nbproject/private/
+/codes/Swing/nbproject/private/
+/codes/Swing/build/

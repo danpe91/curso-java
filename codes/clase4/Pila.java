@@ -55,35 +55,39 @@ public class Pila<T> {
 		while (pila.size() > 0) {
 			System.out.println(pila.pop());
 		}
-		// System.out.println("Entrada");
-		// Pila<Float> p = new Pila<Float>(5);
+		
+		System.out.println("Entrada");
+		Pila<Float> p = new Pila<Float>(5);
 
-		// InputStreamReader isr = new InputStreamReader(System.in);
-		// BufferedReader bf = new BufferedReader(isr);
+		InputStreamReader isr = new InputStreamReader(System.in);
+		BufferedReader bf = new BufferedReader(isr);
 
-		// try {
+		try {
 			
-		// 	String line;
-		// 	while((line = bf.readLine()) != null && !line.isEmpty()) {
+			String line;
+			while((line = bf.readLine()) != null && !line.isEmpty()) {
 
-		// 		float e = Integer.valueOf(line);
-		// 		p.push(e);
-		// 	}
-		// } catch(NumberFormatException nfe) {
-		// 	System.out.println("Numero erroneo");
-		// 	p.push(0f);
-		// } catch(IOException e) {
-		// 	System.out.println("Error");
-		// } catch(Exception w) {
-			
-		// }
-		// finally {
-		// 	System.out.println("Listo");
-		// }
-		// System.out.println("Salida");
-		// while (p.size() > 0) {
-		// 	System.out.println(p.pop());
-		// }	
+				float e = Float.valueOf(line);
+				p.push(e);
+			}
+		} catch(NumberFormatException nfe) {
+			System.out.println("Numero erroneo");
+			p.push(0f);
+			nfe.printStackTrace();
+			System.out.println(nfe.getMessage());
+		} catch(IOException e) {
+			System.out.println("Error");
+		} catch(Exception w) {
+			w.printStackTrace();
+		}
+		finally {
+			System.out.println("Listo");
+		}
+
+		System.out.println("Salida");
+		while (p.size() > 0) {
+			System.out.println(p.pop());
+		}	
 
 		Scanner s = new Scanner(System.in);
 		Pila<Object> otraPila = new Pila<Object>(6);
@@ -94,16 +98,17 @@ public class Pila<T> {
 			String eString, lineaCompleta;
 			float f;
 			long l;
-			System.out.println("Entero");
+
+			System.out.print("Entero: ");
 			e = s.nextInt();
 			s.nextLine();
-			System.out.println("linea");
+			System.out.print("linea: ");
 			lineaCompleta = s.nextLine();
-			System.out.println("next");
+			System.out.print("next: ");
 			eString = s.next();
-			System.out.println("flotante");
+			System.out.print("flotante: ");
 			f = s.nextFloat();
-			System.out.println("long");
+			System.out.print("long: ");
 			l = s.nextLong();
 			otraPila.push(e);
 			otraPila.push(lineaCompleta);
@@ -115,6 +120,25 @@ public class Pila<T> {
 		} catch(Exception e) {
 			System.out.println("Ocurio algo malo");
 			e.printStackTrace();
+		} finally {
+			try {
+				if (bf != null) {
+					bf.close();
+				}
+			} catch(IOException ioe) {
+
+			}
+			try {
+				if (isr != null) {
+					isr.close();
+				}
+			} catch (IOException ioe) {
+
+			}
+			if (s != null) {
+				s.close();
+			}
+			
 		}
 
 		System.out.println("Salida");
