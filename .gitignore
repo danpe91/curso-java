@@ -1,13 +1,11 @@
 *.class
 
-**/nbproject/private/**
-**/build/**
-**/nbbuild/**
-**/dist/**
-**/nbdist/**
-**/nbactions.xml
-**/nb-configuration.xml
+# Netbeans files
+/home/daniel/Escritorio/curso_java/codes/Swing/nbproject/private/
+/home/daniel/Escritorio/curso_java/codes/Swing/build/
+/home/daniel/Escritorio/curso_java/codes/Swing/nbbuild/
+/home/daniel/Escritorio/curso_java/codes/Swing/dist/
+/home/daniel/Escritorio/curso_java/codes/Swing/nbdist/
+/home/daniel/Escritorio/curso_java/codes/Swing/nbactions.xml
+/home/daniel/Escritorio/curso_java/codes/Swing/nb-configuration.xml
 
-/codes/GraphicClase6/nbproject/private/
-/codes/Swing/nbproject/private/
-/codes/Swing/build/
